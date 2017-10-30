@@ -4,6 +4,8 @@
 
 .code
 
+;; Copied from [cc65]/libsrc/c128/systime.s
+
 .proc   _bcd2dec
         tax
         and     #%00001111

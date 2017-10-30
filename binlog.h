@@ -1,7 +1,12 @@
+#include <stdint.h>
+
+enum entry_type {
+  EMPTY = 255
+}
 
 struct logentry {
+    enum entry_type tag; //1
     uint32_t ts; //4
-    enum trans_type tag; //1
     union { //4
         struct sale { //4
             uint8_t user;
